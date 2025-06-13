@@ -5,7 +5,8 @@ import Socials from '../socials/socials.js';
 
 const Card = styled.div`
   width: 40vh;
-  height: 75vh;
+  height: auto;
+  min-height: 65vh; 
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -23,11 +24,18 @@ const Card = styled.div`
 
   @media (max-width: 480px) {
     width: 90vw;
-    height: 60vh;
+    height: auto;
     margin: 1.5rem auto;
     border-radius: 12px;
   }
+
+  @media (max-height: 750px) {
+    min-height: 45vh; 
+    min-width: 50vh;
+  }
 `;
+
+
 
 const Header = styled.div`
   height: 12vh;

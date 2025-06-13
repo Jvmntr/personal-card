@@ -5,6 +5,7 @@ import skillsData from "../../data/skills.json";
 
 const Wrapper = styled.div`
   margin-top: 7%;
+  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,6 +51,15 @@ const NavButton = styled.button`
     height: 36px;
     padding: 0.3rem;
   }
+
+  @media (max-height: 750px) {
+    width: 36px;
+    height: 36px;
+    padding: 0.3rem;
+  }
+
+
+
 `;
 
 const SkillGrid = styled.div`
@@ -59,10 +69,10 @@ const SkillGrid = styled.div`
   flex: 1;
   flex-wrap: wrap;
   gap: 1rem;
-  max-height: 48px;
+  /* REMOVIDO: max-height: 48px; */ /* <--- REMOVA ESTA LINHA */
 
   @media (max-width: 480px) {
-    max-height: 36px;
+    /* REMOVIDO: max-height: 36px; */ /* <--- REMOVA ESTA LINHA */
     gap: 0.5rem;
   }
 `;
