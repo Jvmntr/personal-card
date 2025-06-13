@@ -5,7 +5,6 @@ import skillsData from "../../data/skills.json";
 
 const Wrapper = styled.div`
   margin-top: 7%;
-  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,15 +50,6 @@ const NavButton = styled.button`
     height: 36px;
     padding: 0.3rem;
   }
-
-  @media (max-height: 750px) {
-    width: 36px;
-    height: 36px;
-    padding: 0.3rem;
-  }
-
-
-
 `;
 
 const SkillGrid = styled.div`
@@ -69,10 +59,8 @@ const SkillGrid = styled.div`
   flex: 1;
   flex-wrap: wrap;
   gap: 1rem;
-  /* REMOVIDO: max-height: 48px; */ /* <--- REMOVA ESTA LINHA */
 
   @media (max-width: 480px) {
-    /* REMOVIDO: max-height: 36px; */ /* <--- REMOVA ESTA LINHA */
     gap: 0.5rem;
   }
 `;
@@ -132,22 +120,32 @@ const SkillIcon = styled.img`
     width: 36px;
     height: 36px;
   }
+  
+  @media (max-height: 800px) {
+    width: 36px;
+    height: 36px;
+  }
+  
+  @media (max-width: 480px) and (max-height: 800px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export default function SkillsWrapper() {
   const categories = Object.keys(skillsData);
-  const [index, setIndex] = useState(0);
-  const currentCategory = categories[index];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentCategory = categories[currentIndex];
   const skills = skillsData[currentCategory];
 
-  const updateIndex = (newIndex) =>
-    setIndex(Math.min(Math.max(newIndex, 0), categories.length - 1));
+  const handleIndexChange = (newIndex) =>
+    setCurrentIndex(Math.min(Math.max(newIndex, 0), categories.length - 1));
 
   return (
     <Wrapper>
       <Title>{currentCategory}</Title>
       <Row>
-        <NavButton onClick={() => updateIndex(index - 1)} disabled={index === 0}>
+        <NavButton onClick={() => handleIndexChange(currentIndex - 1)} disabled={currentIndex === 0}>
           <ChevronLeft size={32} />
         </NavButton>
 
@@ -164,8 +162,8 @@ export default function SkillsWrapper() {
         </SkillGrid>
 
         <NavButton
-          onClick={() => updateIndex(index + 1)}
-          disabled={index === categories.length - 1}
+          onClick={() => handleIndexChange(currentIndex + 1)}
+          disabled={currentIndex === categories.length - 1}
         >
           <ChevronRight size={32} />
         </NavButton>

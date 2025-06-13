@@ -7,29 +7,34 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: auto 0 1%;
+  margin-top: 2rem;
+  margin-bottom: 1%;
   width: 100%;
 
   @media (max-width: 480px) {
     gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-height: 800px) {
+    margin-top: 1rem;
   }
 `;
 
 const IconLink = styled.a`
   display: inline-block;
   cursor: pointer;
-  position: relative; /* Necessário para o tooltip */
+  position: relative;
 
   &:hover {
-    transform: scale(1.1); /* Animação de escala ao passar o mouse */
-    transition: transform 0.2s ease-in-out; /* Suaviza a transição */
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
   }
 
-  /* Estilo do Tooltip */
   &::after {
-    content: attr(data-tooltip); /* Pega o texto do atributo data-tooltip */
+    content: attr(data-tooltip);
     position: absolute;
-    bottom: 120%; /* Posição acima do ícone */
+    bottom: 120%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #333;
@@ -38,14 +43,14 @@ const IconLink = styled.a`
     border-radius: 4px;
     font-size: 0.8em;
     white-space: nowrap;
-    opacity: 0; /* Começa invisível */
+    opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 10;
   }
 
   &:hover::after {
-    opacity: 1; /* Torna visível ao passar o mouse */
+    opacity: 1;
     visibility: visible;
   }
 `;
@@ -63,14 +68,14 @@ const Icon = styled.img`
 `;
 
 export default function Socials() {
-  const links = [
+  const socialLinks = [
     { href: 'https://github.com/Jvmntr', src: githubIcon, alt: 'GitHub', tooltip: 'Visitar GitHub' },
     { href: 'https://www.linkedin.com/in/jvmntr/', src: linkedinIcon, alt: 'LinkedIn', tooltip: 'Visitar LinkedIn' }
   ];
 
   return (
     <Container>
-      {links.map(({ href, src, alt, tooltip }) => (
+      {socialLinks.map(({ href, src, alt, tooltip }) => (
         <IconLink key={href} href={href} target="_blank" rel="noopener noreferrer" data-tooltip={tooltip}>
           <Icon src={src} alt={alt} />
         </IconLink>

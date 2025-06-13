@@ -6,17 +6,20 @@ import Socials from '../socials/socials.js';
 const Card = styled.div`
   width: 40vh;
   height: auto;
-  min-height: 65vh; 
+  min-height: 70vh;
+  max-height: calc(100vh - 2rem);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   border-radius: 16px;
-  overflow: hidden;
+  overflow-y: auto;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   background: #ffffff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+  margin: 1rem auto;
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
@@ -25,21 +28,16 @@ const Card = styled.div`
   @media (max-width: 480px) {
     width: 90vw;
     height: auto;
-    margin: 1.5rem auto;
+    min-height: 60vh;
+    max-height: calc(100vh - 2rem);
+    margin: 1rem auto;
     border-radius: 12px;
-  }
-
-  @media (max-height: 750px) {
-    min-height: 45vh; 
-    min-width: 50vh;
   }
 `;
 
-
-
 const Header = styled.div`
-  height: 12vh;
-  background: linear-gradient(to right,rgb(19, 18, 18),rgb(37, 37, 37));
+  height: 10vh;
+  background: linear-gradient(to right, #000000, #808080);
   position: relative;
 
   @media (max-width: 480px) {
@@ -59,7 +57,7 @@ const Avatar = styled.img`
   transition: transform 0.3s ease;
   z-index: 2;
   position: relative;
-  
+
   &:hover {
     transform: scale(1.05);
   }
@@ -92,11 +90,7 @@ const Description = styled.p`
   margin-bottom: 2%;
   line-height: 1.5;
   flex-grow: 0;
-
-  @media (max-width: 480px) {
-    font-size: 0.85rem;
-    padding: 0 7%;
-  }
+  max-height: none;
 `;
 
 const ContentWrapper = styled.div`
@@ -105,6 +99,10 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 1rem;
+
+  @media (max-height: 800px) {
+    padding-bottom: 0.5rem;
+  }
 `;
 
 export default function PersonalCard() {
@@ -117,7 +115,7 @@ export default function PersonalCard() {
         Desenvolvedor fullstack com 3 anos de experiência, criando soluções web completas com foco em performance e boas práticas. Atuo do front ao back, unindo design funcional e código eficiente.
       </Description>
       <ContentWrapper>
-        <SkillsWrapper />
+        <SkillsWrapper style={{ paddingTop: '1rem' }} />
         <Socials />
       </ContentWrapper>
     </Card>
