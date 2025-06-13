@@ -6,9 +6,10 @@
 
 <img src="./src/assets/images/printscreen_project.jpg" alt="Imagem do projeto">
 
-> Um pequeno projeto feito em ReactJS e styled-components com o foco de trazer uma apresentação profissional rápida, contendo um pouco das minhas tecnologias e especialidades.
+> Um pequeno projeto feito em ReactJS e styled-components com o foco de trazer uma apresentação profissional rápida, contendo um pouco das minhas tecnologias e especialidades. <br><br>
+> Acesse aqui -> https://jvmntr.github.io/personal-card/
 
-### ⚙️ Ajustes e melhorias
+## ⚙️ Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
 
