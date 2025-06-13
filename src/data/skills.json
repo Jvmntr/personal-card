@@ -1,0 +1,134 @@
+{
+  "front-end": [
+    {
+      "name": "HTML",
+      "image": "html5.svg",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+      "name": "CSS",
+      "image": "css3.svg",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      "name": "Javascript",
+      "image": "javascript.svg",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "name": "Typescript",
+      "image": "typescript.svg",
+      "link": "https://www.typescriptlang.org/"
+    },
+    {
+      "name": "ReactJS",
+      "image": "reactjs.svg",
+      "link": "https://reactjs.org/"
+    }
+  ],
+  "back-end": [
+    {
+      "name": "NodeJS",
+      "image": "nodejs.svg",
+      "link": "https://nodejs.org/"
+    },
+    {
+      "name": "Python",
+      "image": "python.svg",
+      "link": "https://www.python.org/"
+    },
+    {
+      "name": "Java",
+      "image": "java.svg",
+      "link": "https://www.java.com/"
+    },
+    {
+      "name": "PostgreSQL",
+      "image": "postgresql.svg",
+      "link": "https://www.postgresql.org/"
+    },
+    {
+      "name": "MongoDB",
+      "image": "mongodb.svg",
+      "link": "https://www.mongodb.com/"
+    }
+  ],
+  "cloud": [
+    {
+      "name": "Amazon AWS",
+      "image": "aws.svg",
+      "link": "https://aws.amazon.com/"
+    },
+    {
+      "name": "Microsoft Azure",
+      "image": "azure.svg",
+      "link": "https://azure.microsoft.com/"
+    }
+  ],
+  "utility": [
+    {
+      "name": "Insomnia",
+      "image": "insomnia.svg",
+      "link": "https://insomnia.rest/"
+    },
+    {
+      "name": "Postman",
+      "image": "postman.svg",
+      "link": "https://www.postman.com/"
+    },
+    {
+      "name": "Notion",
+      "image": "notion.svg",
+      "link": "https://www.notion.so/"
+    },
+    {
+      "name": "Bash",
+      "image": "bash.svg",
+      "link": "https://www.gnu.org/software/bash/"
+    }
+  ],
+  "devOps": [
+    {
+      "name": "Git",
+      "image": "git.svg",
+      "link": "https://git-scm.com/"
+    },
+    {
+      "name": "Github",
+      "image": "github-dark.svg",
+      "link": "https://github.com/"
+    },
+    {
+      "name": "Docker",
+      "image": "docker.svg",
+      "link": "https://www.docker.com/"
+    },
+    {
+      "name": "Jest",
+      "image": "jest.svg",
+      "link": "https://jestjs.io/"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Visual studio code",
+      "image": "vscode.svg",
+      "link": "https://code.visualstudio.com/"
+    },
+    {
+      "name": "Figma",
+      "image": "figma.svg",
+      "link": "https://www.figma.com/"
+    },
+    {
+      "name": "Adobe XD",
+      "image": "xd.svg",
+      "link": "https://www.adobe.com/products/xd.html"
+    },
+    {
+      "name": "Adobe Photoshop",
+      "image": "photoshop.svg",
+      "link": "https://www.adobe.com/products/photoshop.html"
+    }
+  ]
+}
