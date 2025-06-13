@@ -1,7 +1,7 @@
 {
   "name": "personal-card",
   "version": "1.0.0",
-  "homepage": "https://{jvmntr}.github.io/{personal-card}",
+  "homepage": "https://jvmntr.github.io/personal-card",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
